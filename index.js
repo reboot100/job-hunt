@@ -17,8 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://unlimitedjobs.me/',
-    credentials:true
+    origin:['https://unlimitedjobs.me/' ,'http://localhost:5173/'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials:true,
+    optionSuccessStatus:204
 }
 
 app.use(cors(corsOptions));
