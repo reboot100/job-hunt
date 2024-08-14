@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: ['*','https://unlimitedjobs.me/', 'http://localhost:5173/'], // Array of allowed origins
+  origin: ['https://unlimitedjobs.me', 'http://localhost:5173'], // Array of allowed origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
   credentials: true, // Allow cookies
   optionSuccessStatus: 204 // Optional: Set the status code for preflight requests
